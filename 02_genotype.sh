@@ -8,8 +8,8 @@
 #SBATCH --array=1-30
 
 # Prepend bcftools path to PATH
-export PATH=~/bcftools/usr/local/bin:$PATH
-source activate vcftools
+conda activate bcftools
+conda activate vcftools
 
 # define main working directory
 workdir=/lustre/scratch/sboyane/camplaevi
