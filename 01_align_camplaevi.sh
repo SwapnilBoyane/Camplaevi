@@ -36,7 +36,7 @@ rm ${workdir}/01_mtDNA/${basename_array}_R1.fastq.gz
 rm ${workdir}/01_mtDNA/${basename_array}_R2.fastq.gz
 
 # run bwa mem ##Uses BWA-MEM to align reads to the reference genome# in this step it uses the reference genome and align the raw reads and output will be saved in  01_bam_files directory
-/home/<eraider>/anaconda3/bin/bwa mem -t 8 ${refgenome} ${workdir}/01_cleaned/${basename_array}_R1.fastq.gz ${workdir}/01_cleaned/${basename_array}_R2.fastq.gz > ${workdir}/01_bam_files/${basename_array}.sam
+~/anaconda3/bin/bwa mem -t 8 ${refgenome} ${workdir}/01_cleaned/${basename_array}_R1.fastq.gz ${workdir}/01_cleaned/${basename_array}_R2.fastq.gz > ${workdir}/01_bam_files/${basename_array}.sam
 
 # convert sam to bam #This step Converts the SAM file (text format) to BAM (compressed binary format)
 ~/anaconda3/envs/samtools/bin/samtools view -b -S -o ${workdir}/01_bam_files/${basename_array}.bam ${workdir}/01_bam_files/${basename_array}.sam
