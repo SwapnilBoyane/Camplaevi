@@ -1,6 +1,6 @@
 #!/bin/sh
 #SBATCH --chdir=./
-#SBATCH --job-name=filter
+#SBATCH --job-name=total_sites
 #SBATCH --nodes=1
 #SBATCH --ntasks=4
 #SBATCH --partition=nocona
