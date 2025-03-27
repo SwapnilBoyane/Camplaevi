@@ -9,7 +9,7 @@
 
 
 # Prepend bcftools path to PATH
-conda install bcftools
+conda activate bcftools
 
 # define main working directory
 workdir=/lustre/scratch/sboyane/camplaevi
