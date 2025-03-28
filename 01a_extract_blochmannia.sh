@@ -1,13 +1,13 @@
 #!/bin/bash
 #SBATCH --chdir=.
-#SBATCH --job-name=bam
-#SBATCH --partition=quanah
+#SBATCH --job-name=extract
+#SBATCH --partition= nocona
 #SBATCH --nodes=1 --ntasks=12
 #SBATCH --time=48:00:00
 #SBATCH --mem-per-cpu=8G
 #SBATCH --array=1-30
 
-source activate samtools
+conda activate
 
 # define main working directory
 workdir=/lustre/scratch/sboyane/camplaevi
