@@ -12,9 +12,6 @@
 conda activate bcftools
 conda activate vcftools
 
-export PATH=~/bcftools/usr/local/bin:$PATH
-source activate vcftools
-
 # define main working directory
 workdir=/lustre/scratch/sboyane/camphybrid
 
