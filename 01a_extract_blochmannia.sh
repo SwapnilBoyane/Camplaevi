@@ -17,7 +17,7 @@ workdir=/lustre/scratch/sboyane/camplaevi
 basename_array=$( head -n${SLURM_ARRAY_TASK_ID} ${workdir}/basenames.txt | tail -n1 )
 
 # define the reference genome
-refgenome=/lustre/work/sboyane/ref/bloch/C145_quercicola.fasta 
+ref=/lustre/work/sboyane/ref/bloch/C145_quercicola.fasta 
 
 # run bbsplit blochmannia  ##BBSplit isolates Blochmannia bacterial reads from cleaned fastq files
 /lustre/work/jmanthey/bbmap/bbsplit.sh in1=${workdir}/01_cleaned/${basename_array}_R1.fastq.gz in2=${workdir}/01_cleaned/${basename_array}_R2.fastq.gz ref=${bloch} basename=${workdir}/01_blochmannia/${basename_array}_%.fastq.gz outu1=${workdir}/01_blochmannia/${basename_array}_R1.fastq.gz outu2=${workdir}/01_blochmannia/${basename_array}_R2.fastq.gz
