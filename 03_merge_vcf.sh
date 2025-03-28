@@ -5,7 +5,7 @@
 #SBATCH --nodes=1 --ntasks=4
 #SBATCH --time=48:00:00
 #SBATCH --mem-per-cpu=8G
-#SBATCH --array=1-30
+#SBATCH --array=1-31
 
 
 # Prepend bcftools path to PATH
