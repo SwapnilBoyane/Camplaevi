@@ -1,14 +1,13 @@
 #!/bin/bash
 #SBATCH --chdir=.
 #SBATCH --job-name=extract
-#SBATCH --partition= nocona
+#SBATCH --partition=nocona
 #SBATCH --nodes=1 --ntasks=12
 #SBATCH --time=48:00:00
 #SBATCH --mem-per-cpu=8G
 #SBATCH --array=1-30
 
 source activate samtools
-
 
 # define main working directory
 workdir=/lustre/scratch/sboyane/camplaevi
@@ -31,8 +30,8 @@ seqtk seq -1 ${workdir}/01_blochmannia/${basename_array}_C145_quercicola.fastq.g
 seqtk seq -2 ${workdir}/01_blochmannia/${basename_array}_C145_quercicola.fastq.gz > ${workdir}/01_blochmannia/01_cleaned/${basename_array}_R2.fastq
 
 # Compress the files to .gz
-gzip ${workdir}/01_blochmannia/01_cleaned/${basename_array}_R1.fastq
-gzip ${workdir}/01_blochmannia/01_cleaned/${basename_array}_R2.fastq
+bgzip ${workdir}/01_blochmannia/01_cleaned/${basename_array}_R1.fastq
+bgzip ${workdir}/01_blochmannia/01_cleaned/${basename_array}_R2.fastq
 
 
 
