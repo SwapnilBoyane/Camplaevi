@@ -7,7 +7,8 @@
 #SBATCH --mem-per-cpu=8G
 #SBATCH --array=1-30
 
-conda activate
+source activate samtools
+
 
 # define main working directory
 workdir=/lustre/scratch/sboyane/camplaevi
