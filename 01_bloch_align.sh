@@ -1,7 +1,7 @@
 #!/bin/bash
 #SBATCH --chdir=.
 #SBATCH --job-name=align
-#SBATCH --partition nocona
+#SBATCH --partition=nocona
 #SBATCH --nodes=1 --ntasks=8
 #SBATCH --mem-per-cpu=8G
 #SBATCH --array=1-30
