@@ -9,7 +9,6 @@
 #SBATCH --array=1-31
 
 
-conda activate bcftools
 conda activate vcftools
 
 # define main working directory
