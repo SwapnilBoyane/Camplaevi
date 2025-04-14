@@ -18,7 +18,7 @@ workdir=/lustre/scratch/sboyane/camplaevi/01_blochmannia
 #for PCA, EEMS, IBD \
 #Filter 1 (in 04_vcf folder)\
 
-vcftools --vcf ${workdir}/04_vcf/blochmannia_camplaevi.vcf  --max-missing 1.0 --keep keeplist_pca.txt  --min-alleles 2 --max-alleles 2 --mac 2  --max-maf 0.49 \
+vcftools --vcf ${workdir}/04_vcf/blochmannia_camplaevi.vcf  --max-missing 1.0 --keep keeplist_bloch.txt  --min-alleles 2 --max-alleles 2 --mac 2  --max-maf 0.49 \
  --recode --recode-INFO-all --out ${workdir}/05_filtered_vcf/bloch_camplaevi_20kbp_final
 
 bgzip ${workdir}/05_filtered_vcf/bloch_camplaevi_20kbp_final.vcf
