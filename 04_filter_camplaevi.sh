@@ -12,7 +12,7 @@
 conda activate vcftools
 
 # define main working directory
-workdir=/lustre/scratch/sboyane/camphybrid
+workdir=/lustre/scratch/sboyane/camplaevi
 
 # define variables
 region_array=$( head -n${SLURM_ARRAY_TASK_ID} ${workdir}/scaffolds.txt | tail -n1 )
