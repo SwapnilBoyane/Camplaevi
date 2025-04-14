@@ -1,2 +1,2 @@
 # Camplaevi
-camponotus_laevi phylogeography
+camponotus_laevigatus phylogeography
