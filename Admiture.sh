@@ -1,7 +1,7 @@
 #!/bin/bash
 #SBATCH --chdir=./
 #SBATCH --job-name=admixture
-#SBATCH --partition nocona
+#SBATCH --partition=nocona
 #SBATCH --nodes=1 --ntasks=4
 #SBATCH --time=48:00:00
 #SBATCH --mem-per-cpu=16G
