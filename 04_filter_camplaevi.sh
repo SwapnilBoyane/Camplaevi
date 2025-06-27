@@ -26,8 +26,7 @@ vcftools --vcf ${workdir}/04_vcf/${region_array}.vcf --keep keeplist.txt  --max-
 vcftools --vcf ${workdir}/04_vcf/${region_array}.vcf --keep keeplist.txt --max-missing 0.8 --max-alleles 2  --max-maf 0.49 --remove-indels --recode --recode-INFO-all --out ${workdir}/08_OH/${region_array}
 
 # run bcftools to simplify the vcftools output for observed heterozygosity analysis
-bcftools query -f '%CHROM\t%POS\t%REF\t%ALT[\t%GT]\n ' ${workdir}/08_OH/${region_array}.recode.vcf > ${workdir}/08_OH/${region_array}.simple.vcf
-
+#bcftools query -f '%CHROM\t%POS\t%REF\t%ALT[\t%GT]\n ' ${workdir}/08_OH/${region_array}.recode.vcf > ${workdir}/08_OH/${region_array}.simple.vcf
 
 # compress files with bgzip and index with tabix
 ~/anaconda3/bin/bgzip ${workdir}/05_filtered_vcf/${region_array}.recode.vcf
